@@ -30,8 +30,6 @@ $appList = @(
     "*king.com.FarmHeroesSaga*"
     "*HILLCLIMBRACING*"
     "Microsoft.MicrosoftSolitaireCollection*"
-    "Microsoft.Maps*"
-    "Microsoft.Microsoft3DViewer*"
     "*ROBLOXCORPORATION.ROBLOX*"
     "*HiddenCityMysteryofShadows*"
     
