@@ -47,13 +47,3 @@ $appList = @(
 foreach ($app in $appList) {
     Get-AppxPackage -allusers $app | Remove-AppxPackage -ErrorAction SilentlyContinue               
 }
-
-
-   
-
- 
-    
-    
-
-
-
