@@ -20,7 +20,7 @@ $programList = @(
     "AOMEI Partition Assistant*"
     "Treesize Free*"
     "CrystalDiskMark*"
-    "Patch Cleaner"
+    "PatchCleaner"
 
 )
 
