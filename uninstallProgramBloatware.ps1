@@ -14,6 +14,7 @@ $programList = @(
     "Dell Digital Delivery"
     "Dell Digital Locker"
     "Dell Optimizer" 
+    "Dell OS Recovery Tool"
 
     #Tools cleanup
     "Hard Disk Sentinel"
@@ -21,12 +22,16 @@ $programList = @(
     "Treesize Free*"
     "CrystalDiskMark*"
     "PatchCleaner"
-
+    "Samsung Magician" 
 )
 
 #Uninstall Programs from the above list
 foreach ($program in $programList) {
-    (Get-WMIObject Win32_Product -Filter 'name=$program').Uninstall()
+    try {
+        (Get-WMIObject Win32_Product -Filter "Name='$program'").Uninstall() | Out-Null
+    } catch {
+        Write-Host "An error occurred, but continuing..."
+    }
 }
 
 Set-ExecutionPolicy Restricted 
