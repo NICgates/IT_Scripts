@@ -5,17 +5,21 @@ Set-ExecutionPolicy RemoteSigned
 $programList = @(
     #Unnused Apps 
     "Teams Machine-Wide Installer"
-    ""
 
     #Dell Bloatware
     "Dell SupportAssist"
     "Dell Power Manager Service"
     "Dell Command | Update for Windows 10"
+    "MyDell"
+    "Dell Digital Delivery"
+    "Dell Digital Locker"
+    "Dell Optimizer" 
 
     #Tools cleanup
-    "HD Sentinel"
-    "Treesize"
-    "Crystal Disk Mark"
+    "Hard Disk Sentinel"
+    "AOMEI Partition Assistant*"
+    "Treesize Free*"
+    "CrystalDiskMark*"
     "Patch Cleaner"
 
 )
