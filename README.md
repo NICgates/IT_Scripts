@@ -1,5 +1,5 @@
 # IT_Scripts
 
-1. Cleanup scripts built for cleaning up full OS drives without deleting user data. Comment out file location, programs, or apps that you don't wish to delete. 
+1. CLEANUP - scripts built for cleaning up full OS drives without deleting user data. Comment out file location, programs, or apps that you don't wish to delete. 
 
-
+2. CONFIG - scripts built for various Windows configurations.
