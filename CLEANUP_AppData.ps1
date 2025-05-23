@@ -24,7 +24,8 @@ foreach ($user in $users) {
 	Remove-Item "$appDataPath\Local\Microsoft\Office\SolutionPackages\*" -Recurse -Force -ErrorAction SilentlyContinue
         
 	#Microsoft OneDrive 
-        #Remove-Item "$appDataPath\Local\Microsoft\OneDrive\*" -Recurse -Force -ErrorAction SilentlyContinue
+        Remove-Item "$appDataPath\Local\Microsoft\OneDrive\*" -Recurse -Force -ErrorAction SilentlyContinue
+	Remove-Item "$appDataPath\Local\OneDrive\*" -Recurse -Force -ErrorAction SilentlyContinue
 	
  
 	
