@@ -3,7 +3,7 @@ $users = Get-ChildItem C:\Users
 foreach ($user in $users) {
     $appDataPath = "$($user.FullName)\AppData"
     Write-Output "Processing $appDataPath"
-    
+        ######################## CHROME ########################
 	#Chrome Cache
 	Remove-Item "$appDataPath\Local\Google\Chrome\User Data\*\Cache\*" -Recurse -Force -ErrorAction SilentlyContinue
 	#Chrome Code Cache 
@@ -13,7 +13,7 @@ foreach ($user in $users) {
         #Cached Website Data 
         Remove-Item "$appDataPath\Local\Google\Chrome\User Data\*\Service Worker\CacheStorage\*" -Recurse -Force -ErrorAction SilentlyContinue
 	
-	
+	######################## MICROSOFT ########################
 	#Microsoft Temp Files
 	Remove-Item "$appDataPath\Local\Temp\*" -Recurse -Force -ErrorAction SilentlyContinue
 	#Microsoft Office Cache 
@@ -22,13 +22,14 @@ foreach ($user in $users) {
 	Remove-Item "$appDataPath\Local\Microsoft\Edge\User Data\Default\Cache\*" -Recurse -Force -ErrorAction SilentlyContinue
 	#Microsoft Office SolutionPackages
 	Remove-Item "$appDataPath\Local\Microsoft\Office\SolutionPackages\*" -Recurse -Force -ErrorAction SilentlyContinue
-        
-	#Microsoft OneDrive 
+ 
+        ######################## ONEDRIVE ########################
+	#Microsoft OneDrive -- Uninstall it and cleanup files 
+ 	(Get-WMIObject Win32_Product -Filter "Name='Microsoft OneDrive'").Uninstall()
         Remove-Item "$appDataPath\Local\Microsoft\OneDrive\*" -Recurse -Force -ErrorAction SilentlyContinue
 	Remove-Item "$appDataPath\Local\OneDrive\*" -Recurse -Force -ErrorAction SilentlyContinue
-	
  
-	
+	######################## MISC ########################
 	#Adobe Temp Files
 	Remove-Item "$appDataPath\Local\Temp\*" -Recurse -Force -ErrorAction SilentlyContinue
 	#Adobe Cache 
