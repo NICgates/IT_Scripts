@@ -52,8 +52,3 @@ foreach ($user in $users) {
 Remove-Item "C:\Windows\Prefetch*" -Recurse -Force -ErrorAction SilentlyContinue
 #Windows Update Cache
 Remove-Item "C:\Windows\SoftwareDistribution\Download\*" -Recurse -Force -ErrorAction SilentlyContinue
-
-
-
-
-
