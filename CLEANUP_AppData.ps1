@@ -1,9 +1,10 @@
 #AppData Cleanup
 $users = Get-ChildItem C:\Users
 foreach ($user in $users) {
-    $appDataPath = "$($user.FullName)\AppData"
-    Write-Output "Processing $appDataPath"
-        ######################## CHROME ########################
+    	$appDataPath = "$($user.FullName)\AppData"
+    	Write-Output "Processing $appDataPath"
+     
+	######################## CHROME ########################
 	#Chrome Cache
 	Remove-Item "$appDataPath\Local\Google\Chrome\User Data\*\Cache\*" -Recurse -Force -ErrorAction SilentlyContinue
 	#Chrome Code Cache 
