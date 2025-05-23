@@ -5,9 +5,14 @@ foreach ($user in $users) {
     Write-Output "Processing $appDataPath"
     
 	#Chrome Cache
-	Remove-Item "$appDataPath\Local\Google\Chrome\User Data\Default\Cache\*" -Recurse -Force -ErrorAction SilentlyContinue
+	Remove-Item "$appDataPath\Local\Google\Chrome\User Data\*\Cache\*" -Recurse -Force -ErrorAction SilentlyContinue
+	#Chrome Code Cache 
+	Remove-Item "$appDataPath\Local\Google\Chrome\User Data\*\Code Cache\*" -Recurse -Force -ErrorAction SilentlyContinue
 	#Chrome Temp Files
-	Remove-Item "$appDataPath\Local\Google\Chrome\User Data\Default\Local Storage\*" -Recurse -Force -ErrorAction SilentlyContinue
+	Remove-Item "$appDataPath\Local\Google\Chrome\User Data\*\Local Storage\*" -Recurse -Force -ErrorAction SilentlyContinue
+        #Cached Website Data 
+        Remove-Item "$appDataPath\Local\Google\Chrome\User Data\*\Service Worker\CacheStorage\*" -Recurse -Force -ErrorAction SilentlyContinue
+	
 	
 	#Microsoft Temp Files
 	Remove-Item "$appDataPath\Local\Temp\*" -Recurse -Force -ErrorAction SilentlyContinue
@@ -15,6 +20,13 @@ foreach ($user in $users) {
 	Remove-Item "$appDataPath\Local\Microsoft\Office\16.0\OfficeFileCache\*" -Recurse -Force -ErrorAction SilentlyContinue
 	#Microsoft Edge Cache 
 	Remove-Item "$appDataPath\Local\Microsoft\Edge\User Data\Default\Cache\*" -Recurse -Force -ErrorAction SilentlyContinue
+	#Microsoft Office SolutionPackages
+	Remove-Item "$appDataPath\Local\Microsoft\Office\SolutionPackages\*" -Recurse -Force -ErrorAction SilentlyContinue
+        
+	#Microsoft OneDrive 
+        #Remove-Item "$appDataPath\Local\Microsoft\OneDrive\*" -Recurse -Force -ErrorAction SilentlyContinue
+	
+ 
 	
 	#Adobe Temp Files
 	Remove-Item "$appDataPath\Local\Temp\*" -Recurse -Force -ErrorAction SilentlyContinue
