@@ -26,9 +26,9 @@ foreach ($user in $users) {
  
         ######################## ONEDRIVE ########################
 	#Microsoft OneDrive -- Uninstall it and cleanup files 
- 	(Get-WMIObject Win32_Product -Filter "Name='Microsoft OneDrive'").Uninstall()
-        Remove-Item "$appDataPath\Local\Microsoft\OneDrive\*" -Recurse -Force -ErrorAction SilentlyContinue
-	Remove-Item "$appDataPath\Local\OneDrive\*" -Recurse -Force -ErrorAction SilentlyContinue
+ 	#(Get-WMIObject Win32_Product -Filter "Name='Microsoft OneDrive'").Uninstall()
+        #Remove-Item "$appDataPath\Local\Microsoft\OneDrive\*" -Recurse -Force -ErrorAction SilentlyContinue
+	#Remove-Item "$appDataPath\Local\OneDrive\*" -Recurse -Force -ErrorAction SilentlyContinue
  
 	######################## MISC ########################
 	#Adobe Temp Files
